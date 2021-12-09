@@ -4,9 +4,11 @@ import "./Search.css";
 const Search = () => {
   const [searchJoke, setSearchJoke] = useState([]);
   const [searchInput, setSearchInput] = useState("");
+  const [noJokes, setNoJokes] = useState(false);
 
   function submit(e) {
     e.preventDefault();
+    setNoJokes(true);
     fetch(
       `https://joke-backend-karma.herokuapp.com/search?text=${encodeURIComponent(
         searchInput
@@ -22,8 +24,8 @@ const Search = () => {
   }
   return (
     <div>
-      <form onSubmit={submit}>
-        <h2>Search Jokes</h2>
+      <h2>Search Jokes</h2>
+      <form className="search-box" onSubmit={submit}>
         <label>Search:</label>
         <input
           type="text"
@@ -31,10 +33,17 @@ const Search = () => {
           onChange={(e) => setSearchInput(e.target.value)}
         />
       </form>
-      <div>
-        {searchJoke.map((joke) => {
-          return <h2>{joke}</h2>;
-        })}
+
+      <div className="search-joke">
+        {searchJoke.length === 0 && noJokes ? (
+          <h3>
+            No Jokes with this <span>{searchInput}</span>
+          </h3>
+        ) : (
+          searchJoke.map((joke) => {
+            return <h3>{joke}</h3>;
+          })
+        )}
       </div>
     </div>
   );

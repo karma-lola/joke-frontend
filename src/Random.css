@@ -1,10 +1,22 @@
 .random-box {
   background-image: url("./sponge.jpg");
   background-size: 100% 100%;
-  height: 61vh;
+  height: 71.4vh;
 }
 
 .random-box h2 {
   margin: 0;
   padding: 1em;
+}
+
+h2 {
+  margin: 0;
+  border: 2px solid black;
+  padding: 1em;
+}
+
+.random-box h3 {
+  border: 2px solid black;
+  margin: 1em;
+  padding: 4em;
 }

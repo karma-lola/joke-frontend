@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "./Popular.css";
 const Popular = () => {
   const [popularJoke, setPopularJoke] = useState([]);
 
@@ -16,10 +17,9 @@ const Popular = () => {
     <div>
       <h2>Popular Jokes </h2>
       <div className="popular-wrapper">
-        {popularJoke.map((joke)=>{
-        return(
-          <h2>{joke}</h2>
-        )})}
+        {popularJoke.map((joke) => {
+          return <h3>{joke}</h3>;
+        })}
       </div>
     </div>
   );

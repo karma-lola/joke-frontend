@@ -32,14 +32,14 @@ const ByCategory = () => {
   }
 
   return (
-    <div>
+    <div className="category-wrapper">
       <h2> Jokes Genre </h2>
       <div className="joketags-wrapper">
         {jokeTags.map((tag) => {
           return <button onClick={() => click(tag)}>{tag}</button>;
         })}
       </div>
-      <h2>{typeJoke}</h2>
+      <h3>{typeJoke}</h3>
     </div>
   );
 };
