@@ -9,6 +9,7 @@ header h1 {
   padding-top: 1em;
   color: aliceblue;
   font-size: 3em;
+  font-family: serif;
 }
 
 nav {
@@ -24,6 +25,7 @@ nav {
   padding: 0.5em;
   position: relative;
   letter-spacing: 2px;
+  font-family: cursive;
 }
 
 .navbar::after {
