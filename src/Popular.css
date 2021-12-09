@@ -1,5 +1,7 @@
 .popular-wrapper {
   border: 2px solid black;
   margin: 1em;
+  background-image: url("./bgc.jpg");
+  background-size: 100% 100%;
 }
 
